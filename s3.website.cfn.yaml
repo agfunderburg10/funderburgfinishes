@@ -1,0 +1,148 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: 'FunderburgFinishes.com - Static website hosting with S3 and CloudFront'
+
+Parameters:
+
+  DefaultRootObject:
+    Description: 'The default path for the index document.'
+    Type: String
+    Default: 'index.html'
+
+  ErrorPagePath:
+    Description: 'The path of the error page for the website.'
+    Type: String
+    Default: '/errors/404'
+  
+  HostedZoneID:
+    Description: 'The ID of your hosted zone in Route 53'
+    Type: 'AWS::Route53::HostedZone::Id'
+    Default: <ENTER_YOUR_HOSTEDZONEID_HERE>
+
+  DomainName:
+    Description: 'The registered domain name for the site'
+    Type: String
+    Default: <ENTER_YOUR_DOMAIN_NAME_HERE>
+
+Resources:
+  
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BucketName: !Sub '${DomainName}-bucket'
+
+
+  CloudFrontOriginAccessIdentity:
+    Type: 'AWS::CloudFront::CloudFrontOriginAccessIdentity'
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: !Ref S3Bucket
+
+  ReadPolicy:
+    Type: 'AWS::S3::BucketPolicy'
+    Properties:
+      Bucket: !Ref S3Bucket
+      PolicyDocument:
+        Statement:
+          - Action: 's3:GetObject'
+            Effect: Allow
+            Resource: !Sub 'arn:aws:s3:::${S3Bucket}/*'
+            Principal:
+              CanonicalUser: !GetAtt CloudFrontOriginAccessIdentity.S3CanonicalUserId
+
+  CloudFrontDistribution:
+    Type: 'AWS::CloudFront::Distribution'
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - !Ref DomainName
+          - !Sub 'www.${DomainName}'
+        CustomErrorResponses:
+          - ErrorCode: 403 # not found
+            ResponseCode: 404
+            ResponsePagePath: !Ref ErrorPagePath
+        DefaultRootObject: !Ref DefaultRootObject
+        Enabled: true
+        HttpVersion: http2
+        Origins:
+          - DomainName: !GetAtt 'S3Bucket.DomainName'
+            Id: s3origin
+            S3OriginConfig:
+              OriginAccessIdentity: !Sub 'origin-access-identity/cloudfront/${CloudFrontOriginAccessIdentity}'
+        PriceClass: 'PriceClass_100'
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+          CachedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+          Compress: true
+          DefaultTTL: 3600 # in seconds
+          ForwardedValues:
+            Cookies:
+              Forward: none
+            QueryString: false
+          MaxTTL: 86400 # in seconds
+          MinTTL: 60 # in seconds
+          TargetOriginId: s3origin
+          ViewerProtocolPolicy: 'allow-all'
+
+        # # UNCOMMENT THIS TO HAVE SITE USE SSL
+        #   ViewerProtocolPolicy: 'redirect-to-https'
+        # ViewerCertificate:
+        #   AcmCertificateArn: # ENTER ARN OF CERT HERE - Example - arn:aws:acm:us-east-1:812212307632:certificate/4b591733-aa21-48f7-b07e-401ed1353bbb
+        #   MinimumProtocolVersion: TLSv1.2_2018
+        #   SslSupportMethod: sni-only
+
+  Route53Record:
+    Type: 'AWS::Route53::RecordSet'
+    Properties:
+      HostedZoneId: !Ref HostedZoneID
+      Name: !Ref DomainName
+      Type: A
+      AliasTarget:
+        HostedZoneId: Z2FDTNDATAQYW2 # This Zone ID is used for any CloudFront Distribution
+        DNSName: !GetAtt 'CloudFrontDistribution.DomainName'
+
+  AdtlRoute53Record:
+    Type: 'AWS::Route53::RecordSet'
+    Properties:
+      HostedZoneId: !Ref HostedZoneID
+      Name: !Sub 'www.${DomainName}'
+      Type: A
+      AliasTarget:
+        HostedZoneId: Z2FDTNDATAQYW2 # This Zone ID is used for any CloudFront Distribution
+        DNSName: !GetAtt 'CloudFrontDistribution.DomainName'
+
+  DeploymentIamManagedPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:*
+            Resource:
+              - !GetAtt S3Bucket.Arn
+              - !Sub 
+                - ${bucketArn}/*
+                - { bucketArn: !GetAtt S3Bucket.Arn }
+          
+          - Effect: Deny
+            Action:
+              - s3:DeleteBucket*
+            Resource:
+              - !GetAtt S3Bucket.Arn
+
+  DeploymentIamUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: !Sub '${DomainName}-deployer'
+      ManagedPolicyArns:
+        - !Ref DeploymentIamManagedPolicy
