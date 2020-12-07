@@ -3,8 +3,8 @@
 /* Padding below the footer and lighter body text */
 
 body {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
     color: #5a5a5a;
   }
   
@@ -16,7 +16,7 @@ body {
   .carousel {
     margin-bottom: 4rem;
     min-height: 32rem;
-    height: 95vh;
+    height: 93vh;
   }
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
@@ -30,7 +30,7 @@ body {
   
   /* Declare heights because of positioning of img element */
   .carousel-item {
-    height: 95vh;
+    height: 93vh;
     min-height: 32rem;
     /* background-color: #343a40; */
   }
@@ -42,7 +42,7 @@ body {
     /* strecth image full-screen */
     /* min-width: 100%; */
     min-height: 32rem;
-    height: 95vh;
+    height: 93vh;
   }
   
   
