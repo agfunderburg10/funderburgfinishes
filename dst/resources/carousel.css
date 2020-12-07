@@ -20,12 +20,13 @@ body {
   }
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
-    bottom: 3rem;
+    bottom: 0rem;
     z-index: 10;
   }
 
   .carousel-caption > h1, .carousel-caption > p {
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+    color: #fff;
   }
   
   /* Declare heights because of positioning of img element */
