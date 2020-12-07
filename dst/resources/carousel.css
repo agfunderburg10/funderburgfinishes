@@ -32,13 +32,15 @@ body {
   .carousel-item {
     height: 95vh;
     min-height: 32rem;
-    background-color: #777;
+    /* background-color: #343a40; */
   }
   .carousel-item > img {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    left: 0;
-    min-width: 100%;
+    left: 0; */
+    margin: auto;
+    /* strecth image full-screen */
+    /* min-width: 100%; */
     min-height: 32rem;
     height: 95vh;
   }
