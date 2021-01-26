@@ -19,15 +19,24 @@ body {
     height: 93vh;
   }
   /* Since positioning the image, we need to help out the caption */
-  .carousel-caption {
+  .carousel-caption 
+  {
     bottom: 0rem;
     z-index: 10;
+    top: 15px;
   }
 
-  .carousel-caption > h1, .carousel-caption > p {
+  .carousel-caption > h1, .carousel-caption > p 
+  {
     /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
     color: #fff;
   }
+
+  /* .carousel-caption > h1 
+  {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #5a5a5a;
+  } */
   
   /* Declare heights because of positioning of img element */
   .carousel-item {
