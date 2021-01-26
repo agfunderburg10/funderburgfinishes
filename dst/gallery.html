@@ -26,6 +26,7 @@
   <!-- Custom styles for this template -->
   <link href="resources/main.css" rel="stylesheet">
   <link href="resources/carousel.css" rel="stylesheet">
+  <script src="resources/gallery.js"></script>
 
 </head>
 
@@ -39,8 +40,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
           <li class="nav-item active">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="gallery.html">Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -52,134 +56,71 @@
 
   <main role="main">
 
-    <div id="myCarousel" class="carousel slide bg-dark" data-interval="false">
-      <!-- <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol> -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="first-slide" src="resources/img/landing.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption text-center">
-              <h1>Building Beauty</h1>
-              <p>You spend a majority of your time in your home. By building gourgeous finishes directly into your home, we build beauty into your life.</p>
-              <p><a class="btn btn-lg btn-dark" href="contact.html" role="button">Contact Us!</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a> -->
-    </div>
-
-
-    <!-- Marketing messaging and featurettes
-      ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-
-      <!-- REMOVE CIRCULAR SECTION
-      <!-- Three columns of text below the carousel 
+    <div class="container">
       <div class="row">
-        <div class="col-lg-4">
-          <img class="rounded-circle"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-            alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-            vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <img class="rounded-circle"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-            alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-            mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <img class="rounded-circle"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-            alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-            felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-            massa justo sit amet risus.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h1 class="gallery-title">Gallery</h1>
         </div>
       </div>
 
-      <!-- START THE FEATURETTES 
-
-      <hr class="featurette-divider">
-
-      REMOVE CIRCULAR SECTION -->
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Molding. Moulding.
-            <br><span class="text-muted">However you spell it, we install it.</span>
-          </h2>
-          <p class="lead">We specialize in the installation of all types of moulding, including base boards, chair rail, and especially crown.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-fluid mx-auto" src="resources/img/crown_example.jpg"
-            alt="Generic placeholder image">
-        </div>
+      <div class="row gallery-filter-buttons" align="center">
+        <button class="btn btn-default filter-button active" data-filter="all">All</button>
+        <button class="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
+        <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
+        <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
+        <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
       </div>
 
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">Staircases & Handrails
-            <br><span class="text-muted">People will stare at your stairs.</span>
-          </h2>
-          <p class="lead">We have years of experience with custom staircase and handrail installation. From simple, straight runs to
-             the most difficult winding walkways, we'll have it looking great.
-          </p>
+      <div class="row">
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
         </div>
-        <div class="col-md-5 order-md-1">
-          <img class="featurette-image img-fluid mx-auto" src="resources/img/staircase_1.jpg"
-            alt="Generic placeholder image">
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Custom Jobs
-            <br><span class="text-muted">You can dream up your own design.</span>
-          </h2>
-          <p class="lead">From entertainment centers to offices, from wainscoting to girder boxes. If you have an idea to make your home more beautiful,
-            we will bring it to life.
-          </p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-fluid mx-auto" src="resources/img/custom_job_example.jpg"
-            alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-    </div><!-- /.container -->
+    </div>
 
 
     <!-- FOOTER -->
