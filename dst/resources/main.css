@@ -16,11 +16,11 @@
 
 .gallery-title
 {
-    padding-top: 7vh;
-    font-size: 36px;
+    padding-top: 3vh;
+    font-size: 48px;
     text-align: center;
     font-weight: 500;
-    margin-bottom: 70px;
+    margin-bottom: 35px;
 }
 .gallery-title:after {
     content: "";
@@ -28,7 +28,6 @@
     width: 7.5%;
     left: 46.5%;
     height: 45px;
-    border-bottom: 1px solid #5e5e5e;
 }
 
 .gallery-filter-buttons 
@@ -68,7 +67,18 @@
     width: 100%;
 }
 
-.gallery_product
+.gallery_product > img
 {
     margin-bottom: 30px;
+    max-width: 100%;
+}
+
+.modal-content
+{
+    height: 90vh;
+}
+
+#lightboxModalImage
+{
+    max-height: 100%;
 }
