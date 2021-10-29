@@ -1,11 +1,11 @@
 on:
   push:
     paths:
-      - 'dst/**.html'
+      - 'dst/resources/**'
     branches:
       - release
 
-name: Deploy Site Changes to AWS S3
+name: Deploy Resource Changes to AWS S3
 
 jobs:
   deploy:
@@ -23,7 +23,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: Sync HTML Files to S3
-      id: sync-html-files
+    - name: Sync Resource Files to S3
+      id: sync-resource-files
       run: |
-        aws s3 sync ./dst s3://funderburgfinishes-bucket --delete --content-type text/html --exclude "*resources/*"
+        aws s3 sync ./dst/resources s3://funderburgfinishes-bucket/resources --delete
