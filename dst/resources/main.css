@@ -72,3 +72,13 @@
     margin-bottom: 30px;
     max-width: 100%;
 }
+
+.modal-content
+{
+    height: 90vh;
+}
+
+#lightboxModalImage
+{
+    max-height: 100%;
+}

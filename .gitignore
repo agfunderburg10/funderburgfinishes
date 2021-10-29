@@ -1,3 +1,5 @@
 raw_images/
 
 .venv
+
+generate_gallery_output.txt
