@@ -33,7 +33,7 @@
 <body class="text-center">
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#"><i class="fas fa-home"></i> Funderburg Finishes</a>
+      <a class="navbar-brand" href="index.html"><i class="fas fa-home"></i> Funderburg Finishes</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="gallery.html">Gallery</a>
+            <a class="nav-link active" href="gallery.html">Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -65,71 +65,239 @@
 
       <div class="row gallery-filter-buttons" align="center">
         <button class="btn btn-default filter-button active" data-filter="all">All</button>
-        <button class="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
-        <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
-        <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
-        <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
+        <button class="btn btn-default filter-button" data-filter="decor">Decorative</button>
+        <button class="btn btn-default filter-button" data-filter="stairs">Stairs & Handrails</button>
+        <button class="btn btn-default filter-button" data-filter="storage">Storage</button>
+        <button class="btn btn-default filter-button" data-filter="furniture">Furniture</button>
+        <button class="btn btn-default filter-button" data-filter="misc">Misc</button>
       </div>
 
-      <div class="row">
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+      <div id="galleryGrid" class="row">
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_01.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_02.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_03.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_04.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_05.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_06.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_07.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_08.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_09.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_10.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_11.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_12.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_13.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_14.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter decor">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/decor_15.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter furniture">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/furniture_01.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter furniture">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/furniture_02.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter furniture">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/furniture_03.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter furniture">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/furniture_04.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter misc">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/misc_01.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter misc">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/misc_02.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter misc">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/misc_03.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter misc">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/misc_04.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter misc">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/misc_05.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_01.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_02.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_03.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_04.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_05.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_06.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_07.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_08.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_09.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_10.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_11.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter stairs">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/stairs_12.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_01.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_02.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_03.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_04.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_05.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_06.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_07.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_08.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_09.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_10.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_11.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_12.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_13.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_14.JPG" />
+        </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter storage">
+          <img class="img-responsive" data-target="#lightboxModal" data-toggle="modal"
+            src="resources/img/gallery/storage_15.JPG" />
         </div>
 
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-        </div>
+      </div>
 
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-        </div>
-
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-        </div>
-
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-        </div>
-
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-        </div>
-
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-        </div>
-
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-        </div>
-
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-        </div>
-
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-        </div>
-
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-        </div>
-
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-          <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+      <!-- Modal -->
+      <div class="modal fade" id="lightboxModal" tabindex="-1" role="dialog" aria-labelledby="lightboxModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <img id="lightboxModalImage" src="">
+          </div>
         </div>
       </div>
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2020 Funderburg Finishes, LLC
+          <!-- &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> -->
+        </p>
+      </footer>
     </div>
-
-
-    <!-- FOOTER -->
-    <footer class="container">
-      <p class="float-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2020 Funderburg Finishes, LLC
-        <!-- &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> -->
-      </p>
-    </footer>
   </main>
 
 </body>
